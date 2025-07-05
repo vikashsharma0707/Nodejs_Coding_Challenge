@@ -1,0 +1,23 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Vikash",
+  "email": "vikash@example.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "vikash@example.com",
+  "password": "123456"
+}
+
+###
+
+GET http://localhost:5000/api/auth/protected
+Authorization: your_jwt_token_here
